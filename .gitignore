@@ -1,0 +1,9 @@
+# Secrets and local editor settings
+.env
+*.local
+.claude/
+
+# Chrome build artifacts
+*.crx
+*.pem
+*.gpc

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Genius pour YouTube</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="brand-icon">g.</span><span>genius<span class="brand-note">pour YouTube</span></span></div>
+    <span class="edition">LYRICS</span>
+  </header>
+  <main>
+    <section class="track">
+      <span class="eyebrow"><span class="dot"></span> À L’ÉCOUTE</span>
+      <h1 id="video-title">Ouvre une vidéo YouTube</h1>
+      <div class="toolbar">
+        <button id="retry" class="secondary">Changer de résultat</button>
+        <button id="refresh" title="Relancer la recherche">↻ Actualiser</button>
+      </div>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+    <select id="match" aria-label="Choisir un résultat Genius"></select>
+    <div class="lyrics-panel">
+      <div class="panel-heading"><span>LES PAROLES</span><span class="reading-controls"><button id="font-smaller" aria-label="Réduire la taille des paroles">A−</button><button id="font-larger" aria-label="Agrandir les paroles">A+</button></span></div>
+      <div id="lyrics" class="empty" tabindex="0" aria-label="Paroles du morceau">Lance un morceau sur YouTube.<br>Ses paroles apparaîtront ici.</div>
+    </div>
+    <footer><span>Les mots derrière la musique.</span><a id="open" target="_blank" rel="noopener">Ouvrir sur Genius ↗</a></footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

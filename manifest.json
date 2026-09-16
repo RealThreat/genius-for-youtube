@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Genius Lyrics Fetcher",
+  "version": "3.0.3",
+  "description": "Paroles Genius fiables pour YouTube, avec prise en charge des titres internationaux.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+    "https://api.genius.com/*",
+    "https://genius.com/*",
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "Genius-logo.png",
+      "48": "Genius-logo.png",
+      "128": "Genius-logo.png"
+    }
+  },
+  "icons": {
+    "16": "Genius-logo.png",
+    "48": "Genius-logo.png",
+    "128": "Genius-logo.png"
+  }
+}
